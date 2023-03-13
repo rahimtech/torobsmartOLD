@@ -1,0 +1,21 @@
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: vazir;
+
+  src: url('../font/Vazir.ttf') format('ttf');
+}
+*{
+  font-family: vazir !important;
+  outline: none;
+  padding: 0px;
+  margin: 0px;
+}
+body{
+  background-color: #f2f3f5;
+}
+.rtl{
+  direction:rtl !important ;
+}
