@@ -10,6 +10,7 @@
 
 # production
 /build
+/rahimtech.github.io
 
 # misc
 .DS_Store
