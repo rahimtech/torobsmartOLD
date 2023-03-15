@@ -3,7 +3,8 @@ import Productbox from "../Productbox.jsx";
 import Header from "../Header.jsx";
 import Footer from "../Footer.jsx";
 import Database from "../Database.js";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { motion as M } from "framer-motion";
 
 function Product() {
   const { serip } = useParams();
@@ -16,7 +17,12 @@ function Product() {
   return (
     <div>
       <Header />
-      <div style={{ height: "80vh" }}>
+      <M.div
+        initial={{ y: "100%" }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+        style={{ height: "80vh" }}
+      >
         <h2 className="mx-auto text-center mt-9">محصولات مشابه</h2>
         <div className="flex justify-center flex-row h-full content-center w-3/4 mx-auto flex-wrap overflow-y-auto items-center">
           {Database.map((i, index) => {
@@ -34,7 +40,7 @@ function Product() {
             }
           })}
         </div>
-      </div>
+      </M.div>
 
       <Footer />
     </div>

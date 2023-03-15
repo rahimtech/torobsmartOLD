@@ -3,15 +3,15 @@ import Logo from "../image/torob_logo.svg";
 let goods = [
   {
     image: Logo,
-    name: "hot mog",
+    name: "ماگ دسته دار",
     price: "75000",
-    id: "m1",
+    id: "8877m1",
     seri: "m",
     click: 0,
   },
   {
     image: Logo,
-    name: "glass",
+    name: "لیوان طرح ماگ",
     price: "25600",
     id: "33758m2",
     seri: "m",
@@ -19,7 +19,7 @@ let goods = [
   },
   {
     image: Logo,
-    name: "milk",
+    name: "شیر پاکتی",
     price: "96000",
     id: "44538m3",
     seri: "a",
@@ -27,7 +27,7 @@ let goods = [
   },
   {
     image: Logo,
-    name: "pc",
+    name: "لپتاپ",
     price: "125400",
     id: "11357m4",
     seri: "b",
@@ -35,7 +35,7 @@ let goods = [
   },
   {
     image: Logo,
-    name: "mog",
+    name: "ماگ",
     price: "95000",
     id: "78539m5",
     seri: "m",
@@ -43,7 +43,7 @@ let goods = [
   },
   {
     image: Logo,
-    name: "mytabe",
+    name: "میز",
     price: "105500",
     id: "m6",
     seri: "d",
