@@ -41,7 +41,7 @@ const Searchbox = () => {
             </span>
           </div>
           <div
-            className={`w-96 mx-auto py-1 h-auto rtl ${checkSuggest} bg-white  border-gray-400 border-2 border-solid rounded-sm mt-1 shadow-md`}
+            className={` absolute searchbox-Horizontal-Size py-1 h-auto rtl ${checkSuggest} bg-white  border-gray-400 border-2 border-solid rounded-sm mt-1 shadow-md`}
           >
             {Database.map((i, index) => {
               if (i.name.indexOf(ajax) > -1) {

@@ -1,12 +1,12 @@
 import React from "react";
 import Body from "./components/mainpage/Body.jsx";
 import "./css/output.css";
-
+import UserContext from "./components/context/userContext";
 function App() {
   return (
-    <div>
+    <UserContext.Provider>
       <Body />
-    </div>
+    </UserContext.Provider>
   );
 }
 

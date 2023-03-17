@@ -19,3 +19,6 @@ body{
 .rtl{
   direction:rtl !important ;
 }
+.searchbox-Horizontal-Size{
+  width: 412px;
+}

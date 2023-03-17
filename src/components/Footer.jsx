@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="absolute w-full bottom-0">
       <div className="bg-gray-50 w-100 flex justify-between px-10 py-2 ">
@@ -52,6 +52,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
