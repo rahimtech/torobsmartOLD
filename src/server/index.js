@@ -31,8 +31,6 @@ app.post("/signin", (req, res) => {
     "SELECT * FROM users WHERE email=?",
     [req.body.email],
     (err, result) => {
-      console.log("result: ", result.length);
-
       if (result.length > 0) {
         res.status(204).send();
         return;
