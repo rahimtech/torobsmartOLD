@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 
 const Footer = () => {
   return (
-    <footer className="absolute w-full bottom-0">
+    <footer className=" w-full relative bottom-0">
       <div className="bg-gray-50 w-100 flex justify-between px-10 py-2 ">
         <div id="left">
           <ul className="list-none flex justify-between  ">

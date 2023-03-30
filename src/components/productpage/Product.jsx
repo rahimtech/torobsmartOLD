@@ -21,9 +21,28 @@ function Product() {
         initial={{ y: "100%" }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        style={{ height: "80vh" }}
+        style={{ minHeight: "100vh" }}
       >
-        <h2 className="mx-auto text-center mt-9">محصولات مشابه</h2>
+        <h2 className="mx-auto text-center my-9">محصولات مشابه</h2>
+        <div id="center" className=" flex justify-evenly">
+          <div id="left" className="w-4/12">
+            <div className="w-full h-36 bg-white text-center flex justify-center flex-wrap">
+              <h3 className="w-full">آخرین تغییرات قیمت</h3>
+              <canvas className="w-full h-2/4 bg-red-300 mx-1"></canvas>
+            </div>
+          </div>
+          <div id="right" className="w-6/12">
+            <div className="flex w-full h-full bg-white justify-evenly items-center">
+              <div id="left" className="rtl">
+                <h3>اسم محصول</h3>
+                <p>توضیحات درباره این محصول</p>
+              </div>
+              <div id="right" className="r-0">
+                <img src={Database[0].image} />
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="flex justify-center flex-row h-full content-center w-3/4 mx-auto flex-wrap overflow-y-auto items-center">
           {Database.map((i, index) => {
             if (i.seri === serip) {

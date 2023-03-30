@@ -10,6 +10,7 @@
 
 #server mudouls
 /src/server/node_modules
+/rahimtech.github.io
 
 # production
 /build

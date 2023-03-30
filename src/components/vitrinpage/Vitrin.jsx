@@ -16,7 +16,7 @@ function Vitrin() {
         initial={{ y: "100%" }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        style={{ height: "80vh" }}
+        style={{ minHeight: "100vh" }}
       >
         <h2 className="mx-auto text-center mt-9">ویترین محصولات تٌرب</h2>
 
