@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <Vitrin />,
   },
   {
-    path: `/product/:serip/:idp/:namep`,
+    path: `/product/:serip/:counter/:namep`,
     element: <Product />,
   },
 ]);

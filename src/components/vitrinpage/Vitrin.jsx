@@ -23,7 +23,7 @@ function Vitrin() {
         <div className="flex justify-center flex-row h-full content-center w-3/4 mx-auto flex-wrap overflow-y-auto items-center">
           {Database.map((i, index) => {
             return (
-              <Link to={`/product/${i.seri}/${i.id}/${i.name}`}>
+              <Link to={`/product/${i.seri}/${index}/${i.name}`}>
                 <Productbox
                   key={index}
                   image={i.image}

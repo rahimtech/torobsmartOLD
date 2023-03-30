@@ -48,7 +48,7 @@ const Searchbox = () => {
                 return (
                   <Link
                     className="!no-underline"
-                    to={`/product/${i.seri}/${i.id}/${i.name}`}
+                    to={`/product/${i.seri}/${index}`}
                   >
                     <p className="pr-2 px-2 py-2	text-gray-600 hover:bg-gray-100 hover:cursor-pointer">
                       {i.name}

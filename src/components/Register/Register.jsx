@@ -29,7 +29,8 @@ const Register = () => {
         }
       })
       .catch((err) => {
-        console.log("err: ", err);
+        setOpen("400");
+        setServerMessage("سرور برای ثبت نام متصل نیست");
       });
   };
   return (
@@ -50,6 +51,7 @@ const Register = () => {
           open == 400 ? "absolute" : "hidden"
         }  rtl items-center left-0 right-0 mx-auto top-36 w-72`}
       >{`${serverMessage}`}</Alert>
+
       <Alert
         severity="success"
         className={`z-30 ${
