@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Productbox from "../Productbox.jsx";
 import Header from "../Header.jsx";
 import Footer from "../Footer.jsx";
 import Database from "../Database.js";
 import { Link, useParams } from "react-router-dom";
 import { motion as M } from "framer-motion";
+import { Button } from "@mui/material";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import ShareIcon from "@mui/icons-material/Share";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 function Product() {
+  const [stateBuy, setStateBuy] = useState(true);
   const { serip } = useParams();
   const { counter } = useParams();
   console.log("counter: ", counter);
@@ -41,9 +46,20 @@ function Product() {
           <div id="right" className="w-6/12">
             {/* Right First Stage */}
             <div className="flex w-full py-6 bg-white justify-evenly items-center">
-              <div id="left" className="rtl">
+              <div id="left" className="rtl w-3/5">
                 <h3>{Database[counter].name}</h3>
-                <p>توضیحات درباره این محصول</p>
+                <p>{Database[counter].des}</p>
+                <p className="text-red-500 my-5">
+                  {Database[counter].price} تا {Database[counter].price}
+                </p>
+                <div className="flex justify-between">
+                  <Button color="error" variant="contained">
+                    خرید از ارزان ترین فروشنده
+                  </Button>
+                  <ShareIcon />
+                  <FavoriteBorderIcon />
+                  <NotificationsNoneIcon />
+                </div>
               </div>
               <div id="right" className="r-0">
                 <img src={Database[0].image} />
@@ -51,12 +67,54 @@ function Product() {
             </div>
             {/* Right Second Stage */}
             <div className="flex w-full py-6 mt-3 bg-white justify-evenly items-center">
-              <div id="left" className="rtl">
-                <h3>فروشنده ها</h3>
-                <p>توضیحات درباره این محصول</p>
-              </div>
-              <div id="right" className="r-0">
-                <img src={Database[0].image} />
+              <div id="left" className="rtl w-full ">
+                <h3 className="mr-3 ">فروشنده ها</h3>
+
+                <div className="flex mt-3">
+                  <Button variant="text" onClick={() => setStateBuy(true)}>
+                    خرید اینترنتی
+                  </Button>
+                  <Button variant="text" onClick={() => setStateBuy(false)}>
+                    خرید حضوری
+                  </Button>
+                </div>
+                <hr className="border-gray-300" />
+
+                <div
+                  id="box"
+                  className={`w-full h-20 ${
+                    stateBuy ? `flex` : `hidden`
+                  } justify-around hover:bg-slate-200 hover:cursor-pointer py-4`}
+                >
+                  <h4 className="mr-3 ">فروشگاه تابان</h4>
+                  <div className="w-2/5">
+                    <div className="w-fit  font-light px-3 rounded-lg border border-gray-300 bg-green-300">
+                      5سال در ترب
+                    </div>
+                    <h5>{Database[counter].des}</h5>
+                  </div>
+                  <Button color="error" className="w-12 h-8" variant="outlined">
+                    خرید
+                  </Button>
+                </div>
+
+                <div
+                  id="box"
+                  className={`w-full h-20 ${
+                    stateBuy ? `hidden` : `flex`
+                  } justify-around hover:bg-slate-200 hover:cursor-pointer py-4`}
+                >
+                  <h4 className="mr-3 ">فروشگاه فیروزه</h4>
+                  <div className="w-2/5">
+                    <div className="w-fit  font-light px-3 rounded-lg border border-gray-300 bg-green-300">
+                      3سال در ترب
+                    </div>
+                    <h5>{Database[counter].des}</h5>
+                  </div>
+                  <Button color="error" className="w-12 h-8" variant="outlined">
+                    خرید
+                  </Button>
+                </div>
               </div>
             </div>
             {/* ----End Right Stage---- */}
