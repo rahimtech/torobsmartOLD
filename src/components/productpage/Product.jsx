@@ -71,10 +71,26 @@ function Product() {
                 <h3 className="mr-3 ">فروشنده ها</h3>
 
                 <div className="flex mt-3">
-                  <Button variant="text" onClick={() => setStateBuy(true)}>
+                  <Button
+                    variant="text"
+                    className={`${
+                      stateBuy
+                        ? `!border-b-2 !rounded-none !border-solid !border-slate-500`
+                        : ``
+                    }`}
+                    onClick={() => setStateBuy(true)}
+                  >
                     خرید اینترنتی
                   </Button>
-                  <Button variant="text" onClick={() => setStateBuy(false)}>
+                  <Button
+                    variant="text"
+                    className={`${
+                      stateBuy
+                        ? ``
+                        : `!border-b-2 !rounded-none !border-solid !border-slate-500`
+                    }`}
+                    onClick={() => setStateBuy(false)}
+                  >
                     خرید حضوری
                   </Button>
                 </div>
@@ -83,8 +99,8 @@ function Product() {
                 <div
                   id="box"
                   className={`w-full h-20 ${
-                    stateBuy ? `flex` : `hidden`
-                  } justify-around hover:bg-slate-200 hover:cursor-pointer py-4`}
+                    stateBuy ? `flex ` : `hidden`
+                  } justify-around hover:bg-slate-200  py-4`}
                 >
                   <h4 className="mr-3 ">فروشگاه تابان</h4>
                   <div className="w-2/5">
@@ -101,8 +117,8 @@ function Product() {
                 <div
                   id="box"
                   className={`w-full h-20 ${
-                    stateBuy ? `hidden` : `flex`
-                  } justify-around hover:bg-slate-200 hover:cursor-pointer py-4`}
+                    stateBuy ? `hidden` : `flex border-b-4`
+                  } justify-around hover:bg-slate-200  py-4`}
                 >
                   <h4 className="mr-3 ">فروشگاه فیروزه</h4>
                   <div className="w-2/5">
