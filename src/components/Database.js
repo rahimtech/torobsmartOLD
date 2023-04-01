@@ -8,6 +8,7 @@ let goods = [
     id: "8877m1",
     seri: "m",
     click: 0,
+    des: "",
   },
   {
     image: Logo,
@@ -16,6 +17,7 @@ let goods = [
     id: "33758m2",
     seri: "m",
     click: 0,
+    des: "",
   },
   {
     image: Logo,
@@ -24,6 +26,7 @@ let goods = [
     id: "44538m3",
     seri: "a",
     click: 0,
+    des: "",
   },
   {
     image: Logo,
@@ -32,6 +35,7 @@ let goods = [
     id: "11357m4",
     seri: "b",
     click: 0,
+    des: "",
   },
   {
     image: Logo,
@@ -40,6 +44,7 @@ let goods = [
     id: "78539m5",
     seri: "m",
     click: 0,
+    des: "",
   },
   {
     image: Logo,
@@ -48,6 +53,16 @@ let goods = [
     id: "m6",
     seri: "d",
     click: 0,
+    des: "",
+  },
+  {
+    image: Logo,
+    name: "موبایل سامسونگ",
+    price: "۲۱٫۱۹۰٫۰۰۰ ",
+    id: "m6",
+    seri: "d",
+    click: 0,
+    des: "گوشی سامسونگ S21 FE 5G | حافظه 256 رم 8 گیگابایت ا Samsung Galaxy S21 FE 5G 256/8 GB",
   },
 ];
 
