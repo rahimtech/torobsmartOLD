@@ -26,5 +26,3 @@ In this page must thing that very important and much more visible is simillar pr
 # Link of React App Codes
 https://github.com/rahimtech/torobsmart
 
-# Output
-https://rahimtech.github.io
